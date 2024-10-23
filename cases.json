@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Kilowatt Case",
+        "tradeupspyUrl": "https://api.tradeupspy.com/api/collections/full/279?special=false&stickers=false"
+    },
+    {
+        "name": "Revolution Case",
+        "tradeupspyUrl": "https://api.tradeupspy.com/api/collections/full/270?special=false&stickers=false"
+    },
+    {
+        "name": "Recoil Case",
+        "tradeupspyUrl": "https://api.tradeupspy.com/api/collections/full/261?special=false&stickers=false"
+    },
+    {
+        "name": "Dreams & Nightmares Case",
+        "tradeupspyUrl": "https://api.tradeupspy.com/api/collections/full/252?special=false&stickers=false"
+    },
+    {
+        "name": "Fracture Case",
+        "tradeupspyUrl": "https://api.tradeupspy.com/api/collections/full/60?special=false&stickers=false"
+    }
+]
