@@ -17,7 +17,7 @@ async function fetchCases() {
             const skinsDetails = await fetchSkinsDetails(response.data);
             treatedCases.push({
                 "case": box.name,
-                "skins": skinsDetails
+                "skinsByRarity": skinsDetails
             });
         } catch (error) {
             console.log(error);
@@ -35,7 +35,7 @@ async function fetchCases() {
 }
 
 async function fetchSkinsDetails(data) {
-    const skinsInfo = [];
+    const skinsByRarity = {};
     const baseUrl = `https://api.tradeupspy.com/api/skins/full/`;
     let urls = data.skinList.map(skin => `${baseUrl}${skin.ids}`);
 
@@ -54,9 +54,13 @@ async function fetchSkinsDetails(data) {
                 "maxFloat": skinData.maxFloat
             };
 
-            skinsInfo.push(obj);
+            if (!skinsByRarity[skinData.rarityCode]) {
+                skinsByRarity[skinData.rarityCode] = [];
+            }
+
+            skinsByRarity[skinData.rarityCode].push(obj);
         });
-        return skinsInfo;
+        return skinsByRarity;
     } catch (error) {
         console.log(error);
     }
